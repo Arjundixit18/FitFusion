@@ -1,3 +1,78 @@
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const bodyParser = require("body-parser");
+// const dotenv = require("dotenv");
+
+// const app = express();
+// dotenv.config();
+
+// const port = process.env.PORT || 3000;
+
+
+// //connecting mongo
+
+// const username = process.env.MONGODB_USERNAME;
+// const password = process.env.MONGODB_PASSWORD ;
+
+// // mongoose.connect(`mongodb+srv://<username>:<password>@cluster0.dtgjc1f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0` , {
+//     mongoose.connect(`mongodb+srv://Jaskirat_2000:mxYEhaurufurwMCn@cluster0.dtgjc1f.mongodb.net/registrationFormDB` , {
+//     useNewUrlParser : true,
+//     useUnifiedTopology : true,
+
+// });
+
+// //registrationschema
+// const registrationSchema = new mongoose.Schema({
+//     name : String,
+//     email : String,
+//     password: String
+
+// })
+
+// //mode of registration schema
+// const Registration = mongoose.model("Registration", registrationSchema);
+// app.use(bodyParser.urlencoded ({ extended: true}));
+// app.use(bodyParser.json());
+
+
+
+// app.get("/",(req, res) => {
+//     res.sendFile(__dirname + "/pages/membership.html");
+
+// })
+
+// app.post("/register",async (req, res)=>{
+//     try{
+//         const {name, email, password} = req.body;
+
+//         const registrationData = new Registration({
+//             name,
+//             email,
+//             password
+//         });
+//         await registrationData.save();
+//         res.redirect("/success");
+
+ 
+//     }
+//     catch{
+//         console.log(error);
+//         res.redirect("error");
+
+//     }
+// })
+
+// app.get("/success", (req, res)=>{
+//     res.sendFile (__dirname+ "/pages/solution1.html");
+// })
+
+
+// app.listen(port, ()=>{
+//     console.log(`server is running on port ${port}`);
+// })
+
+
+
 
  
 
@@ -16,14 +91,14 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 
+// Connecting to MongoDB
 
+// const username = process.env.MONGODB_USERNAME;
+// const password = process.env.MONGODB_PASSWORD ;
 
-mongoose.connect("mongodb+srv://gouravjio80:gouravthakur2002@cluster0.15fztxq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" , {
-  
-}).then(() => {
-  console.log(`Connection to MongoDB successful`);
-}).catch((error) => {
-  console.error(`Error connecting to MongoDB: ${error}`);
+mongoose.connect("mongodb+srv://gouravjio80:gouravthakur2002@cluster0.dtgjc1f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" , {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 // Registration Schema
@@ -107,12 +182,6 @@ app.get('/payment', function (req, res) {
 })
 app.get('/womenCourse', function (req, res) {
   res.render("womenCourse");
-})
-app.get('/login', function (req, res) {
-  res.render("login");
-})
-app.get('/register', function (req, res) {
-  res.render("register");
 })
 
 
