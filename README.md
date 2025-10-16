@@ -5,6 +5,7 @@ A fitness and wellness web platform designed to help users achieve their health 
 
 ---
 
+
 ##  Features
 
 - User Authentication (via Firebase)
