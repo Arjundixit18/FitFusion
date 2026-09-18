@@ -1,8 +1,6 @@
 # Fit Fusion 
 A fitness and wellness web platform designed to help users achieve their health goals with personalized workout plans, diet charts, BMI calculators, and more. Built using HTML, CSS, JavaScript, and integrated with Firebase for user authentication.
 
-
-
 ---
 
 
